@@ -7,7 +7,7 @@
     <!-- /////////////////////////////////// Str Main //////////////////////////////////////////////////// -->
     <!--external css for this template -->
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bower/bootstrap/dist/css/bootstrap.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('Content/bootstrap.css') }}" />
 
     <link rel="stylesheet" type="text/css" href="{{ asset('Content/Theme/assets/css/*.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('Content/Theme/assets/font-awesome/css/*.css') }}" />

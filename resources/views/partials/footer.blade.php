@@ -16,13 +16,13 @@
     <!-- ////////////////////////////////////////////////////////////////////////////////////////  -->
 
 
-    <script type="text/javascript" src="{{ asset('bower/jquery/dist/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('Scripts/jquery-3.4.1.min..js') }}"></script>
 
 
     <script type="text/javascript" src="{{ asset('Scripts/jquery.validate*') }}"></script>
 
 
-    <script type="text/javascript" src="{{ asset('bower/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('Scripts/bootstrap.min.js') }}"></script>
 
 
     <!-- //20201216 CCL+ Str 用於JsFunLoading等 Plugins ////////////////////////////////////////////////// -->

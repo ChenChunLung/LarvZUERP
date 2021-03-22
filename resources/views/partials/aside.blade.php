@@ -39,7 +39,7 @@
                                             <span>J.部門建立作業</span>
                                         </a>
                                         <ul class="sub">
-                                            <li>{{!! action('Create') !!}}</li>
+                                            <li></li>
 
                                         </ul>
                                     </li>
@@ -49,7 +49,7 @@
                                             <span>K.督導建立作業</span>
                                         </a>
                                         <ul class="sub">
-                                            <li>{{!! action('Create') !!}}</li>
+                                            <li>{{ url('board') }}</li>
 
 
                                         </ul>
@@ -82,7 +82,7 @@
                                             <span>C.日記帳</span>
                                         </a>
                                         <ul class="sub">
-                                            <li>{{!! action('Index') !!}}</li>
+                                            <li>{{ url('board') }}</li>
 
                                         </ul>
                                     </li>
@@ -92,7 +92,7 @@
                                             <span>F.勞健保薪資</span>
                                         </a>
                                         <ul class="sub">
-                                            <li>{{!! action('Create') !!}}</li>
+                                            <li>{{ url('board') }}</li>
 
                                         </ul>
                                     </li>

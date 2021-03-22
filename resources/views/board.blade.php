@@ -295,8 +295,7 @@
                         </thead>
                         <tbody>
 
-                            @foreach($Model as $item)
-                            {
+
                                 <tr>
                                     <td>
 
@@ -365,7 +364,7 @@
                                     </td>
 
                                 </tr>
-                            }
+                           
                         </tbody>
 
                     </table>
@@ -383,5 +382,3 @@
 
 </div><!-- /row -->
 @stop
-
-
