@@ -294,74 +294,73 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{int $i = 0;}}
+
                             @foreach($Model as $item)
                             {
                                 <tr>
                                     <td>
-                                        {{ $item->$Id }}
-                                    </td>
-                                    <td>
-                                        {{ $item->SubpDate }}
-                                    </td>
-                                    <td>
-                                        {{ $item->SubpNo }}
 
                                     </td>
                                     <td>
-                                        {{ $item->AccountNo }}
 
                                     </td>
                                     <td>
-                                        {{ $item->SubjectName }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->DetailAccountNo }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->DetailSubjectName }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->DepartNo }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->DepartName }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->DetailAccountNo }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->DetailSubjectName }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->DepartNo }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->DepartName }}
 
                                     </td>
                                     <td>
-                                        {{ $item->CreditAmount }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->DebitAmount }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->FiscalYear }}
+
 
                                     </td>
                                     <td>
-                                        {{ $item->AccountPeriod }}
+
+
+                                    </td>
+                                    <td>
+
+
+                                    </td>
+                                    <td>
+
 
                                     </td>
 
@@ -385,117 +384,4 @@
 </div><!-- /row -->
 @stop
 
-@section('JSPartCode')
 
-    <script type="text/javascript">
-
-
-
-
-    $(document).ready(function () {
-
-
-
-    });
-
-    ///////////////////////////////////////////////////
-
-    //20210108 CCL+ /////////////////////////////
-    function JsFunJQValidate_Summary()
-    {
-        /////////////////////////////////////////
-        //confirm("form");
-        var $l_oValidator = $("form#" + PageInfo.PROG_ID).validate({
-            rules: {
-                na_StartDate: {
-                    required: true
-                },
-                na_EndDate: {
-                    required: true
-                }
-                //,SelShopItem: {
-                //    required: true
-                //}
-            }
-
-            //, messages: {
-            //    SelShopItem: {
-            //        required: ' 至少必選一項 '
-            //    }
-            //}
-
-            //改用套件的localization.js
-            //, messages: {
-            //    na_StartDate: {
-            //        required: '必填'
-            //    },
-            //    na_EndDate: {
-            //        required: '必填'
-            //    }
-            //}
-
-        });
-
-        //confirm(l_rtnVal.form());
-        if ($l_oValidator.form()) {
-            return true;
-        } else {
-            return false;
-        }
-
-        /////////////////////////////////////////
-
-
-    }
-
-
-    function JSFunBefore_Post() {
-
-        //confirm("Tol: " + $("#CheckedItems").val());
-        //20210108 CCL- SetFunShopItems();
-
-
-        //Validation
-        var l_bIsValid = false;
-        var l_bIsUseManSel = false;
-        var l_bIsStrEndDateEmpty = false;
-        var l_bIsManagerSelEmpty = false;
-        var l_bIsShopsSelEmpty = false;
-
-        l_bIsUseManSel = $("#id_IsUseManSel").bootstrapSwitch('state');
-        //confirm(l_bIsUseManSel);
-
-        if (l_bIsUseManSel == true) {
-            l_bIsManagerSelEmpty = JsFun_ChkManagerSelIsEmpty();
-        } else {
-            l_bIsShopsSelEmpty = JsFun_ChkShopsSelIsEmpty();
-        }
-
-        l_bIsStrEndDateEmpty = JsFunJQValidate_Summary();
-        //confirm("StrEndDateSel: " + l_bIsStrEndDateEmpty);
-
-        if (l_bIsUseManSel == true) {
-            l_bIsValid = l_bIsStrEndDateEmpty & l_bIsManagerSelEmpty;
-        } else {
-            l_bIsValid = l_bIsStrEndDateEmpty & l_bIsShopsSelEmpty;
-        }
-
-
-        if (l_bIsValid) {
-            JsFunLOADING_SHOW(true);
-            //confirm(l_bIsValid);
-            //return false;
-        } else {
-            return false; //不Post
-        }
-
-
-    }
-
-
-    ///////////////////////////////////////////////////////////////////
-
-
-    </script>
-
-@stop
